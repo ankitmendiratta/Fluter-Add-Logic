@@ -91,7 +91,8 @@ class Home extends StatelessWidget {
                   )),
                 ],
               ),
-              FLightImage()
+              FLightImage(),
+              FLightButton()
             ],
           )
 
@@ -113,5 +114,44 @@ class FLightImage extends StatelessWidget {
     Image image = Image(image: assetImage);
 
     return Container(child: image);
+  }
+}
+
+class FLightButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Container(
+      margin: EdgeInsets.all(30.0),
+      width: 250.0,
+      height: 50.0,
+      child: RaisedButton(
+          color: Colors.lightGreen,
+          elevation: 6.0,
+          child: Text(
+            'Book Your FLight',
+            style: TextStyle(
+              fontSize: 25.0,
+              color: Colors.white,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          onPressed: () {
+            bookFlight(context);
+          }),
+    );
+  }
+
+  void bookFlight(BuildContext context) {
+    var alert = AlertDialog(
+      title: Text('Flight Booked'),
+      content: Text('Have a safe flight'),
+    );
+
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return alert;
+        });
   }
 }
