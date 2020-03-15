@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 // class Home extends StatelessWidget{
@@ -24,8 +26,7 @@ class Home extends StatelessWidget {
     // TODO: implement build
     return Center(
       child: Container(
-
-        padding: EdgeInsets.only(left:10.0,top:40.0),
+          padding: EdgeInsets.only(left: 10.0, top: 40.0),
           alignment: Alignment.center,
           color: Colors.lightBlue,
           child: Column(
@@ -89,7 +90,8 @@ class Home extends StatelessWidget {
                     ),
                   )),
                 ],
-              )
+              ),
+              FLightImage()
             ],
           )
 
@@ -99,5 +101,17 @@ class Home extends StatelessWidget {
           //  margin: EdgeInsets.only(right:60),
           ),
     );
+  }
+}
+
+class FLightImage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+
+    AssetImage assetImage = AssetImage('images/download.jpeg');
+    Image image = Image(image: assetImage);
+
+    return Container(child: image);
   }
 }

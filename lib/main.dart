@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './first_screen.dart';
+import './home.dart';
 //OR using FAT Arrow
 void main() => runApp( new MyFlutterApp()); 
 
@@ -52,7 +53,7 @@ class MyFlutterApp extends StatelessWidget
      home: new Scaffold(
 
        appBar : AppBar(title: Text('My First App Screen')),
-       body: FirstScreen()
+       body: Home()
      )
     );
   }
