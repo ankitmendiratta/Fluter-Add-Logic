@@ -93,7 +93,6 @@ class Home extends StatelessWidget {
             ],
           )
 
-          //  width: 200.0,
           //  height: 200.0,
           // padding: EdgeInsets.all(30),
           //  margin: EdgeInsets.only(right:60),
