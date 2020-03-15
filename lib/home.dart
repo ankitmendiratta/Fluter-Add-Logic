@@ -24,15 +24,27 @@ class Home extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return  Center(
-        child: Container(
+        child: Container(  
 
      alignment: Alignment.center,
-     color: Colors.lightBlue,
-     child: new Text('Flight',textDirection: TextDirection.ltr,),
+     color: Colors.lightBlue, 
+     child: Text(
+       'Flight Mode',
+       textDirection: TextDirection.ltr,
+      style: TextStyle(
+
+         decoration: TextDecoration.none,
+         fontSize: 45.0,
+         fontFamily: 'Raleway',
+         fontStyle: FontStyle.italic,
+        fontWeight: FontWeight.w300,
+        color: Colors.white,
+        ),
+       ),
     //  width: 200.0,
     //  height: 200.0,
     // padding: EdgeInsets.all(30),
-     margin: EdgeInsets.only(right:60),
+    //  margin: EdgeInsets.only(right:60),
     ),
     );
   }
