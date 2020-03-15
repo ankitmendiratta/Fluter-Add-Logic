@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import './first_screen.dart';
 import './home.dart';
+
 //OR using FAT Arrow
-void main() => runApp( new MyFlutterApp()); 
+void main() => runApp(new MyFlutterApp());
 
 ////////////////////////////////////////
 //This is normal structure
@@ -11,7 +12,7 @@ void main() => runApp( new MyFlutterApp());
 
 // runApp(
 //      new MyFlutterApp()
-//   ); 
+//   );
 // }
 // runApp(
 
@@ -32,32 +33,52 @@ void main() => runApp( new MyFlutterApp());
 //      ),
 //      )
 //     )
-//   ); 
+//   );
 // }
 
 /////////////////////////////////////////////////////////////////
 //ORGANIZE OUR CODE FROM HERE
 
-
-
-
-class MyFlutterApp extends StatelessWidget
-{
+class MyFlutterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
 
     return new MaterialApp(
-      debugShowCheckedModeBanner: false,
-     title:'My Flutter App',
-     home: new Scaffold(
-
-       appBar : AppBar(title: Text('My First App Screen')),
-       body: Home()
-     )
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'My Flutter App',
+        home: new Scaffold(
+          appBar: AppBar(title: Text('My First App Screen')),
+          body: Scaffold(
+            body: getlistview(),
+          ),
+        ));
   }
 }
 
+Widget getlistview() {
+  var list = ListView(
+    children: <Widget>[
+      ListTile(
+        title: Text('Landscape ok'),
+        subtitle: Text('beautiful landscape'),
+        leading: Icon(Icons.landscape),
+        trailing: Icon(Icons.wb_sunny),
+        onTap: () {
+          debugPrint('Landscape tapped');
+        },
+      ),
+      ListTile(
+        title: Text('Windows'),
+        leading: Icon(Icons.landscape),
+      ),
+      ListTile(
+        title: Text('Phone'),
+        leading: Icon(Icons.landscape),
+      ),
+      Text('Another text')
+    ],
+  );
 
-
+  return list;
+}
